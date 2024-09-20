@@ -1,5 +1,3 @@
 # Напишите программу, которая считывает длины двух катетов в прямоугольном треугольнике и выводит его площадь.
 
-side_a = float(input())
-side_b = float(input())
-print(side_a*side_b*0.5)
+print(float(input())*float(input())*0.5)

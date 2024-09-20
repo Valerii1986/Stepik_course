@@ -5,7 +5,6 @@ num = int(input())
 max_digit = max(num // 100, num // 10 % 10, num % 10)
 min_digit = min(num // 100, num // 10 % 10, num % 10)
 middle_digit = (num // 100 + num // 10 % 10 + num % 10) - max_digit - min_digit
-print(num // 100, num // 10 % 10, num % 10)
 if max_digit - min_digit == middle_digit:
     print('Interesting digit')
 else:
