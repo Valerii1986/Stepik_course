@@ -8,3 +8,4 @@ y_2 = float(input())
 
 distance = math.sqrt(math.pow(x_1 - x_2, 2) + math.pow(y_1 - y_2, 2))
 print(distance)
+
