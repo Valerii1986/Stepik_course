@@ -8,7 +8,6 @@
 start_num = int(input())
 increase_percent = int(input())
 num_days = int(input())
-population = start_num
 for i in range(num_days):
-    print(i + 1, population)
-    population = population * increase_percent / 100 + population
+    print(i + 1, start_num)
+    start_num = start_num * increase_percent / 100 + start_num
