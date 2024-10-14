@@ -3,21 +3,10 @@
 # В мире ведьмака существуют монеты с номиналами 1,5,10,25.
 # Напишите программу, которая определяет, какое минимальное количество чеканных монет нужно заплатить ведьмаку.
 
+counter = 0
 num = int(input())
-count = 0
-flag = True
-while flag:
-    if num // 25 >= 1:
-        count = num // 25
-        num = num % 25
-    if num // 10 >= 1:
-        count = num // 10 + count
-        num = num % 10
-    if num // 5 >= 1:
-        count = num // 5 + count
-        num = num % 5
-    else:
-        count = num // 1 + count
-        num = num % 1
-        flag = False
-print(count)
+for i in (25, 10, 5, 1):
+    while num >= i:
+        counter += 1
+        num = num - i
+print(counter)

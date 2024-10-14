@@ -2,11 +2,8 @@
 
 
 num = int(input())
-flag = True
 s = ''
-while flag:
+while num > 0:
     s = s + str(num % 10)
     num = num // 10
-    if num == 0:
-        flag = False
 print(s)

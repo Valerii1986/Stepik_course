@@ -12,7 +12,6 @@ summ = 0
 count = 0
 multiplication = 1
 mean = 0
-first_plus_last_digit = 0
 minimum = num % 10
 last_digit = num % 10
 while num > 0:
@@ -23,11 +22,7 @@ while num > 0:
     first_digit = num % 10
     num = num // 10
 
-print(summ)
-print(count)
-print(multiplication)
-print(mean/count)
-print(first_digit)
-print(first_digit + last_digit)
+print(summ, count, multiplication, mean/count, first_digit, first_digit + last_digit, sep='\n')
+
 
 
