@@ -8,9 +8,10 @@
 # 11 12 13 14 15
 # 16 17 18 19 20 21
 # ...
-
 num = int(input())
+count = 1
 for i in range(1, (num + 1)):
-    for j in range(0, i):
-        print(i+j, ' ', end='')
+    for j in range(1, i + 1):
+        print(count, '', end='')
+        count = count + 1
     print('')
