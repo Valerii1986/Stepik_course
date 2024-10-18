@@ -7,5 +7,6 @@ while n > 0:
     cur_digit = n % 10
     if last_digit != cur_digit:
         flag = "NO"
+        break
     n //= 10
 print(flag)
