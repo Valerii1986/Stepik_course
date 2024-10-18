@@ -7,18 +7,15 @@
 
 num_a = int(input())
 num_b = int(input())
-count = 0
 summ = 0
 max_summ = 0
-max_count = 0
-for i in range(num_a, num_b+1):
-    for j in range(1, num_b+1):
+number = 0
+for i in range(num_a, num_b + 1):
+    summ = 0
+    for j in range(1, i + 1):
         if i % j == 0:
-            count += 1
             summ = summ + j
-    if count > max_count:
-        max_count = count
+    if summ >= max_summ:
         max_summ = summ
-        count = 0
-        summ = 0
-print(max_count, max_summ)
+        number = i
+print(number, max_summ)
