@@ -5,8 +5,8 @@ num_m = int(input())
 num_n = int(input())
 
 if num_m < num_n:
-    for i in range(num_m, num_n + 1):
-        print(i)
+    counter = 1
 else:
-    for i in range(num_m, num_n - 1, -1):
-        print(i)
+    counter = -1
+for i in range(num_m, num_n + counter, counter):
+    print(i)
