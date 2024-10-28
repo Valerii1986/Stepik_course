@@ -5,12 +5,10 @@
 # которое и называется цифровым корнем первоначального числа n.
 
 num = int(input())
-last_digit = 0
 while num > 9:
     summ = 0
     while num > 0:
-        last_digit = num % 10
-        summ += last_digit
+        summ += num % 10
         num = num // 10
     num = summ
 print(num)
