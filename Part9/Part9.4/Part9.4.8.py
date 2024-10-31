@@ -3,10 +3,6 @@
 # а также все символы, находящиеся между ними.
 
 text = input()
-updated_text = ''
-index_1 = text.find("h")
-index_2 = text.rfind("h")
-for i in range(len(text)):
-    if i < index_1 or i > index_2:
-        updated_text += text[i]
-print(updated_text)
+print(text[:text.find("h")] + text[text.rfind("h") + 1:])
+
+
