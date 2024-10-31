@@ -2,7 +2,4 @@
 # переставит их местами и выведет на экран.
 
 text = input()
-first_part = text[0:len(text) - len(text) // 2]
-second_part = text[len(text) - len(text) // 2: len(text)]
-
-print(second_part, first_part, sep='')
+print(text[(len(text) + 1) // 2:] + text[:(len(text) + 1) // 2])
