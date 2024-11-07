@@ -10,23 +10,12 @@
 # <БУКВА><ЦИФРА><ЦИФРА><ЦИФРА><БУКВА><БУКВА>_<ЦИФРА><ЦИФРА><ЦИФРА>
 # где <ЦИФРА> – это любая цифра, а <БУКВА> – это одна из букв кириллицы АВЕКМНОРСТУХ.
 
-text = input()
+num = input()
+alpha = "АВЕКМНОРСТУХ"
+digital = num[1:4] + num[7:]
+lett = num[0] in alpha and num[4] in alpha and num[5] in alpha
 
-if len(text) == 9:
-    if text[0] in "АВЕКМНОРСТУХ" and text[4] in "АВЕКМНОРСТУХ" and text[5] in "АВЕКМНОРСТУХ" and text[6] == '_':
-        if text[1:4].isdigit() and text[7:9].isdigit():
-            print("YES")
-        else:
-            print("NO")
-    else:
-        print("NO")
-elif len(text) == 10:
-    if text[0] in "АВЕКМНОРСТУХ" and text[4] in "АВЕКМНОРСТУХ" and text[5] in "АВЕКМНОРСТУХ" and text[6] == '_':
-        if text[1:4].isdigit() and text[7:10].isdigit():
-            print("YES")
-        else:
-            print("NO")
-    else:
-        print("NO")
+if 11 > len(num) > 8 and digital.isdigit() and lett and num[6] == '_':
+    print('YES')
 else:
-    print("NO")
+    print('NO')
