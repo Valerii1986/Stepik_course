@@ -4,7 +4,4 @@
 text = input()
 for char in text:
     print(ord(char), end=" ")
-print("\n")
-text = input()
-for char in text:
-    print(ord(char), end=" ")
+

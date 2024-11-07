@@ -14,7 +14,6 @@ code_step = int(input())
 text = input()
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 for char in text:
-    decryption = ord(char) - code_step
-    if decryption < 97:
-        decryption += 26
-    print(chr(decryption), end='')
+    new_index = (ord(char) - ord('a') - code_step) % 26
+    print(alphabet[new_index], end='')
+
