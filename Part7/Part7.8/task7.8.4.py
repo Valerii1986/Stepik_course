@@ -9,11 +9,6 @@
 # *
 
 num = int(input())
-for i in range(1, (num + 1)):
-    if i <= (num + 1) / 2:
-        print('*' * i)
-    else:
-        break
-for j in range(i - 2, 0, -1):
-    print('*' * j)
+for i in range(1, num + 1):
+    print('*' * min(i, num - i + 1))
 
