@@ -6,6 +6,7 @@ for _ in input().split('.'):
         continue
     else:
         flag = False
+        break
 if flag:
     print("YES")
 else:
