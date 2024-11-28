@@ -13,8 +13,8 @@
 # Пустую строку вместо первой строки ввода выводить не надо.
 
 
-new_list = input().split("#")
-number = int(new_list[1])
+new_list = input()
+number = int(new_list.lstrip("#"))
 for _ in range(number):
     row = input()
     if "#" in row:
