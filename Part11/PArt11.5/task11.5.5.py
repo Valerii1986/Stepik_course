@@ -2,9 +2,7 @@
 # разделенных точкой. Напишите программу, которая определяет, является ли введенная строка текста корректным ip-адресом.
 flag = True
 for _ in input().split('.'):
-    if 0 <= int(_) <= 255:
-        continue
-    else:
+    if int(_) <= 0 or int(_) >= 255:
         flag = False
         break
 if flag:
