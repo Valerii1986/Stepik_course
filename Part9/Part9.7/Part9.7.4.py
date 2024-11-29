@@ -3,15 +3,13 @@
 # Если самых тяжелых слов будет несколько, то программа должна вывести первое из них.
 
 maxi = 0
+n = 0
 for _ in range(4):
     summ = 0
     text = input()
     for i in text:
-        n = ord(i)
-        summ += n
-    if summ > maxi:
-        maxi = summ
+        n += ord(i)
+    if n > maxi:
+        maxi = n
         name = text
 print(name)
-
-
