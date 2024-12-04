@@ -7,3 +7,5 @@ for char in text:
     if char.islower():
         counter += 1
 print(counter)
+
+
