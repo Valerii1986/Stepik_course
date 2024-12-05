@@ -2,4 +2,4 @@
 # использующую списочное выражение, которая выведет квадраты чётных чисел, кроме тех квадратов,
 # которые оканчиваются на цифру 4.
 
-print(*[int(_) ** 2 for _ in input().split() if int(_) % 2 == 0 and (int(_) ** 2) % 10 != 4 and (int(_) ** 2) // 10 != 0])
+print(*[int(number) ** 2 for number in input().split() if int(number) % 2 == 0 and (int(number) ** 2) % 10 != 4 and (int(number) ** 2) // 10 != 0])

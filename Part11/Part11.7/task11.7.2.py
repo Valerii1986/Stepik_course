@@ -5,6 +5,6 @@ keywords = ['False', 'True', 'None', 'and', 'with', 'as', 'assert', 'break', 'cl
             'else', 'except', 'finally', 'try', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda',
             'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'while', 'yield']
 
-lengths = [len(_) for _ in keywords]
+lengths = [len(list_element) for list_element in keywords]
 
 print(lengths)
