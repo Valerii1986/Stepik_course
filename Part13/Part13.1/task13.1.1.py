@@ -16,8 +16,9 @@
 
 def draw_box():
     print("*" * 10)
+    wall = '*' + ' ' * 8 + '*'
     for _ in range(12):
-        print('*', ' ' * 6, '*')
+        print(wall)
     print("*" * 10)
 
 
