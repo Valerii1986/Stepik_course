@@ -6,21 +6,20 @@
 # Программа должна вывести «YES» (без кавычек), если книги отсортированы в соответствии с пожеланиями Душнилы,
 # или «NO» (без кавычек) в противном случае.
 
-number_books = int(input())
-flag = True
-old_book = input()
-old_book = (old_book[: old_book.find(" ")] + old_book[old_book.find("«"):])
-for counter in range(number_books-1):
+previous_book = ''
+is_ordered = 'YES'
+
+for counter in range(int(input())):
     new_book = input()
-    new_book = (new_book[: new_book.find(" ")] + new_book[new_book.find("«"):])
-    if old_book > new_book:
-        flag = False
-        break
-    old_book = new_book
-if flag:
-    print("YES")
-else:
-    print("NO")
+    current_surname = new_book[: new_book.find(' ')]
+    current_title = new_book[new_book.find('«') + 1: new_book.rfind('»')]
+    current_book = current_surname + current_title
+
+    if current_book < previous_book:
+        is_ordered = 'NO'
+    previous_book = current_book
+
+print(is_ordered)
 
 
 
