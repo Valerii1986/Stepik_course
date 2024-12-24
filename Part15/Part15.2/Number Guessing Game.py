@@ -21,7 +21,7 @@ def game():
 
     right_border = int(right_border)
     random_number = random.randint(1, right_border)
-    print(random_number)
+   # print(random_number)
     counter = 0
 
     while True:
