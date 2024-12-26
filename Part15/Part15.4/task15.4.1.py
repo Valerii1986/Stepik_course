@@ -1,11 +1,25 @@
+# Описание проекта: программа генерирует заданное количество паролей и включает в себя умную настройку на длину пароля,
+# а также на то, какие символы требуется в него включить, а какие исключить.
+
+# Программа должна запрашивать у пользователя следующую информацию:
+#
+# Количество паролей для генерации;
+# Длину одного пароля;
+# Включать ли цифры 0123456789?
+# Включать ли прописные буквы ABCDEFGHIJKLMNOPQRSTUVWXYZ?
+# Включать ли строчные буквы abcdefghijklmnopqrstuvwxyz?
+# Включать ли символы !#$%&*+-=?@^_?
+# Исключать ли неоднозначные символы il1Lo0O?
+
+
 import random
 
-digits = '0123456789'
-lowercase_letters = 'abcdefghijklmnopqrstuvwxyz'
-uppercase_letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-punctuation = '!#$%&*+-=?@^_'
-exception = "il1Lo0O"
-chars = ""
+DIGITS = '0123456789'
+LOWERCASE_LETTERS = 'abcdefghijklmnopqrstuvwxyz'
+UPPERCASE_LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+PUNCTUATION = '!#$%&*+-=?@^_'
+EXCEPTION = "il1Lo0O"
+CHARS = ""
 
 number_of_passwords = int(input("Введите количество паролей для генерации:"))
 length = int(input("Введите длину одного пароля:"))
@@ -17,28 +31,28 @@ add_punctuation = input("Включать ли символы !#$%&*+-=?@^_? д�
 remove_exception = input("Исключать ли неоднозначные символы il1Lo0O? да/нет: ").strip().lower()
 
 if add_digit == "да":
-    chars += digits
+    CHARS += DIGITS
 if add_lowercase_letters == "да":
-    chars += lowercase_letters
+    CHARS += LOWERCASE_LETTERS
 if add_uppercase_letters == "да":
-    chars += uppercase_letters
+    CHARS += UPPERCASE_LETTERS
 if add_punctuation == "да":
-    chars += punctuation
+    CHARS += PUNCTUATION
 if remove_exception == "да":
-    for x in exception:
-        chars = chars.replace(x, "")
+    for x in EXCEPTION:
+        chars = CHARS.replace(x, "")
 
 
-def generate_password(length, chars):
+def generate_password(length, CHARS):
     password = ""
     for i in range(length):
-        password += random.choice(chars)
+        password += random.choice(CHARS)
     return password
 
 
 passwords = []
 for _ in range(number_of_passwords):
-    passwords.append(generate_password(length, chars))
+    passwords.append(generate_password(length, CHARS))
 
 print("Сгенерированные пароли:")
 for password in passwords:
