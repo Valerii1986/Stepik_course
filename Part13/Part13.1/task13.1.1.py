@@ -15,10 +15,12 @@
 # **********
 
 def draw_box():
-    print("*" * 10)
+    border = "*" * 10
+    wall = '*' + ' ' * 8 + '*'
+    print(border)
     for _ in range(12):
-        print('*', ' ' * 6, '*')
-    print("*" * 10)
+        print(wall)
+    print(border)
 
 
 draw_box()
