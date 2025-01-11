@@ -11,38 +11,26 @@
 # Примечание. Символы, не являющиеся английскими буквами, не изменяются.
 
 
-text = input()
-new_text = text
-for j in text:
-    if j in '*,.!@"-=)?':
-        new_text = new_text.replace(j, '')
+alphabet = 'abcdefghijklmnopqrstuvwxyz'
 
-list_len = [len(i) for i in new_text.split()]
+text_old = input()
+words = text_old.split()
+text_new = ""
+for word in words:
+    shift = sum([int(letter.lower() in alphabet) for letter in word])
 
-count = 0
-word_new = ''
+    for letter in word:
+        if letter in alphabet:
+            old_letter_position = alphabet.index(letter)
+            letter = alphabet[(old_letter_position + shift) % 26]
 
-for char in text:
-    number = ord(char)
+        elif letter.lower() in alphabet:
+            old_letter_position = alphabet.index(letter.lower())
+            letter = alphabet[(old_letter_position + shift) % 26].upper()
 
-    if char == ' ':
-        count += 1
-        word_new += chr(number)
-    elif 65 <= number <= 90:
-        number += list_len[count]
-        if number > 90:
-            number = number - 26
-            word_new += chr(number)
-        else:
-            word_new += chr(number)
-    elif 97 <= number <= 122:
-        number += list_len[count]
-        if number > 122:
-            number = number - 26
-            word_new += chr(number)
-        else:
-            word_new += chr(number)
-    else:
-        word_new += chr(number)
+        text_new += letter
 
-print(word_new)
+    text_new += " "
+
+print(text_new)
+
