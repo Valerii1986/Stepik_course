@@ -40,7 +40,7 @@ if add_punctuation == "да":
     CHARS += PUNCTUATION
 if remove_exception == "да":
     for x in EXCEPTION:
-        chars = CHARS.replace(x, "")
+        CHARS = CHARS.replace(x, "")
 
 
 def generate_password(length, CHARS):
