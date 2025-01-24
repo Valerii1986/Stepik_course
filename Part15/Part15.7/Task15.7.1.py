@@ -217,15 +217,9 @@ def play(word):
 
     while guessed:
         print(display_hangman(tries))
-        if tries == 1:
-            print(f'У вас {tries} спроба')
-        elif 2 <= tries < 5:
-            print(f'У вас {tries} спроби')
-        else:
-            print(f'У вас {tries} спроб')
         print(' '.join(word_letters))
         if tries == 0:
-            print('Вы програли!')
+            print('Ви програли!')
             break
         letter = input('Введіть букву чи слово: ').upper()
         if len(letter) >= 2:
@@ -258,8 +252,7 @@ while True:
     play(word)
     play_again = input('Хочете зіграти ще раз? Введіть y/n або т/н: ').lower()
 
-    if play_again == 'y' or play_again == 'т':
-        continue
-    else:
+    if play_again not in "тy":
         print("Дякую за Гру, удачі Вам")
         break
+
