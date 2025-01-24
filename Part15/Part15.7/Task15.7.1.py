@@ -251,19 +251,15 @@ def play(word):
             tries -= 1
 
 
-flag = True
-while flag:
+play_again = ''
+
+while True:
     word = get_word(word_list)
     play(word)
-    play_again = ''
-    while True:
-        play_again = input('Хочете зіграти ще раз? Введіть y/n або т/н: ').lower()
-        if play_again == 'n' or play_again == 'н':
-            flag = False
-            print("Дякую за Гру, удачі Вам")
-            break
-        elif play_again == 'y' or play_again == 'т':
+    play_again = input('Хочете зіграти ще раз? Введіть y/n або т/н: ').lower()
 
-            break
-        else:
-            continue
+    if play_again == 'y' or play_again == 'т':
+        continue
+    else:
+        print("Дякую за Гру, удачі Вам")
+        break
