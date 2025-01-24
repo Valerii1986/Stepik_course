@@ -252,7 +252,7 @@ while True:
     play(word)
     play_again = input('Хочете зіграти ще раз? Введіть y/n або т/н: ').lower()
 
-    if play_again not in "тy":
+    if play_again not in ("т", "y"):
         print("Дякую за Гру, удачі Вам")
         break
 
